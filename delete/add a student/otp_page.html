@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<title>Welcome Page</title>
+		<style>
+				body{
+					min-height: 100vh;
+					background-image: linear-gradient(120deg,#3498db,#8e44ad);
+				}
+			#two
+			{
+				top:10%;
+				left:35%;
+				width: 360px;
+ 				/*height:77%;*/
+				position: absolute;
+			  padding: 80px 40px;
+			  border-radius: 10px;
+				background: #f1f1f1;
+			}
+
+			input[type=password]
+			{
+				font-size: 15px;
+			  color: #33;
+			  border: none;
+			  width: 100%;
+			  /* outline: none;
+			  background: none; */
+			  padding: 0 5px;
+			  height: 40px;
+			}
+
+			span{
+			  content: attr(data-placeholder);
+			  position: absolute;
+			  top: 50%;
+			  left: 5px;
+			  color: #adadad;
+			  transform: translateY(-50%);
+			  z-index: -1;
+			  transition: .5s;
+			}
+
+			input[type=submit]
+			{
+				display: block;
+			  width: 100%;
+			  height: 50px;
+			  border: none;
+			  background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+			  background-size: 200%;
+			  color: #fff;
+			  outline: none;
+			  cursor: pointer;
+			  transition: .5s;
+			}
+
+
+			*{
+			  margin: 0;
+			  padding: 0;
+			  text-decoration: none;
+			  font-family: montserrat;
+			  box-sizing: border-box;
+			}
+
+
+
+			.login-form h1{
+			  text-align: center;
+			  margin-bottom: 60px;
+			}
+
+			.txtb{
+			  border-bottom: 2px solid #adadad;
+			  position: relative;
+			  margin: 30px 0;
+			}
+
+			.txtb input{
+			  font-size: 15px;
+			  color: #333;
+			  border: none;
+			  width: 100%;
+			  /* outline: none; */
+			  /* background: none; */
+			  padding: 0 5px;
+			  height: 40px;
+			}
+
+
+			.logbtn:hover{
+			  background-position: right;
+			}
+
+		</style>
+		<script type="text/javascript">
+			function preback(){  window.history.forward(); }
+			setTimeout("preback();",0);
+			window.onunload()=function(){null};
+		</script>
+	</head>
+	<body>
+		<div id="two" class="txtb">
+			<center>
+				<form name="otp_page" method="post" action="otp_validation.php">
+					<div>
+						<h2>Enter the OTP sent to your Email</h2>
+					</div>
+					 <br><br>
+					<div>
+						<input type="password" name="otp" required class="txtb">
+						<span class="txtb"></span>
+					</div>
+				 <br><br>
+					<div>
+						<input type="submit" name="otp_submit" value="SUBMIT" class="logbtn	">
+					</div>
+				</form>
+			</center>
+		</div>
+	</body>
+	</html>

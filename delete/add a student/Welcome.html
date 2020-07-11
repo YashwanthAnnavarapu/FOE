@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="Welcome.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+    <style>
+      #one
+  			{
+  				position:absolute;
+  				width:100%;
+  				text-align:center;
+  			}
+        body
+        {
+          background-image: url('welcome.png');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center;
+          border-image-outset: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+      function preback(){  window.history.forward(); }
+      setTimeout("preback();",0);
+      window.onunload()=function(){null};
+      
+      function hello()
+      {
+        alert(document.getElementsByClassName('drone').value);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="bg_image" >
+      <img src="welcome.png" width=100% height=100%>
+    </div>
+    <div id="one">
+    </div>
+
+      <form name="login" action="Login_Validation.php" method="post" class="login-form">
+
+          <center><img src="image1.png" width="40%" heigth="40%"></center>
+
+          <div class="txtb">
+            <input type="text" name="rollno" required>
+            <span data-placeholder="Roll Number"></span>
+          </div>
+
+          <div class="txtb">
+            <input type="text" name="name" required>
+            <span data-placeholder="Name"></span>
+          </div>
+
+          <div class="txtb">
+            <input type="email" name="email" required>
+            <span data-placeholder="E-Mail"></span>
+          </div>
+
+          <div>
+            <center>
+            <table width="80%"><tr>
+              <td style="width:33.33%;">
+            <input type="radio" id="III-I" name='year-semester' value="III-I"  checked>
+            <label for="III-I"><font size="4" face="Times of Roman">III-I</font></label>
+              </td>
+              <td style="width:33.33%;">
+            <input type="radio" id="III-II" name='year-semester' value="III-II">
+            <label for="III-II"><font size="4" face="Times of Roman">III-II</font></label>
+              </td>
+              <td style="width:33.33%;">
+            <input type="radio" id="IV-I" name='year-semester'  value="IV-I">
+            <label for="IV-I"><font size="4" face="Times of Roman">IV-I</font></label>
+              </td>
+            </tr></table></center>
+          </div>
+          <div>
+          <input type="submit" name="w_submit" class="logbtn" value="Login">
+        </div>
+      </form>
+
+      <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+      </script>
+  </body>
+</html>
